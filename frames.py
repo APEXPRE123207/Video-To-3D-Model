@@ -8,11 +8,11 @@ def extract_frames(input_video, output_directory):
         os.makedirs(output_directory)
 
     # Open the video file
-    video_capture = cv.VideoCapture(input_video)
+    video = cv.VideoCapture(input_video)
 
     # Get video properties
-    frame_rate = video_capture.get(cv.CAP_PROP_FPS)
-    total_frames = int(video_capture.get(cv.CAP_PROP_FRAME_COUNT))
+    frame_rate = video.get(cv.CAP_PROP_FPS)
+    total_frames = int(video.get(cv.CAP_PROP_FRAME_COUNT))
     frames_per_second = 0
     while(frames_per_second < 1 or frames_per_second > round(frame_rate)-1 ):
         print("The video frame rate in fps is: {} and the total number of frames if the video is: {}".format(round(frame_rate),total_frames))
@@ -24,26 +24,26 @@ def extract_frames(input_video, output_directory):
 
     # Read and save frames
     frame_count = 0
-    fames_saved = 0
+    frames_saved = 0
     while True:
-        success, frame = video_capture.read()
+        success, frame = video.read()
 
         if not success:
             break
 
         # Save frame every frame_interval frames
         if frame_count % frame_interval == 0:
-            frame_filename = os.path.join(output_directory, f"frame_{frame_count // frame_interval}.jpg")
+            filename = os.path.join(output_directory, f"frame_{frame_count // frame_interval}.jpg")
 
             # Display the image with the number added
             # plt.imshow(frame)
             # plt.show()
-            fames_saved+=1
-            cv.imwrite(frame_filename, frame)
+            frames_saved+=1
+            cv.imwrite(filename, frame)
 
         frame_count += 1
-    return fames_saved
+    return frames_saved
 
     # Release the video capture object
-    video_capture.release()
+    video.release()
 
