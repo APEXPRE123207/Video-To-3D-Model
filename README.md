@@ -175,12 +175,13 @@ From Anaconda Prompt, run:
 ```bash
 .\instant-ngp.exe --scene "path\to\instant-ngp\data\v2obj"
 ```
-
+---
 
 ### 5. From rendered scene into 3D (.STL) object - Instant-ngp and MeshLab:
 - To extract a 3D object from the rendered scene - follow [Export 3D Object from Nvidia (instant-ngp) NeRF and load it into Blender and MeshLab](https://www.youtube.com/watch?v=55XKtYOIB7Y)
 This video demonstrates how to use the Instant-NGP built-in API to produce a 3D object from the scene.
 
+---
 ### 6. Blender
 - After extracting open it in blender.
 - Delete the noises from the 3D Model.
