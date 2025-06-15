@@ -178,15 +178,17 @@ From Anaconda Prompt, run:
 - To extract a 3D object from the rendered scene - follow [Export 3D Object from Nvidia (instant-ngp) NeRF and load it into Blender and MeshLab](https://www.youtube.com/watch?v=55XKtYOIB7Y)
 This video demonstrates how to use the Instant-NGP built-in API to produce a 3D object from the scene.
 
-
+### 6. Blender
+- After extracting open it in blender.
+- Delete the noises
 ---
 ## Purpose of each file
 
 | File Name | Purpose |
 | :-- | :-- |
-| `video_to_frames.py` | Extracts frames from video as images |
+| `frames.py` | Extracts frames from video as images |
 | `video_to_COLMAP.py` | Orchestrates the full pipeline: extraction, COLMAP, and visualization |
-| `visualize_COLMAP_output.py` | Visualizes camera positions/orientations from COLMAP output |
+| `visualize_COLMAP.py` | Visualizes camera positions/orientations from COLMAP output |
 | `correction1.py` | Fixes image paths in `transforms.json` for Instant-NGP compatibility |
 | `correction2.py` | Verifies that image files are valid and not corrupted |
 
