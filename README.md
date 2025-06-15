@@ -13,20 +13,32 @@ Download and install the following:
 
 | Tool | Purpose | Download Link |
 | :-- | :-- | :-- |
-| CUDA Toolkit (v12.4 or compatible) | GPU support for Instant-NGP | [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) |
-| Visual Studio 2022 Community Edition | Building C++ projects | [Visual Studio](https://visualstudio.microsoft.com/vs/community/) |
-| CMake | Building Instant-NGP | [CMake](https://cmake.org/download/) |
-| COLMAP | Structure-from-Motion and MVS pipeline | [COLMAP GitHub](https://github.com/colmap/colmap) |
 | Anaconda | Managing Python virtual environments | [Anaconda](https://www.anaconda.com/products/distribution) |
-| MeshLab | Mesh viewing and editing | [MeshLab](https://www.meshlab.net/) |
+| CUDA Toolkit (v12.4 or compatible) | GPU support for Instant-NGP | [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) |
+| CMake | Building Instant-NGP | [CMake](https://cmake.org/download/) |
+| Visual Studio 2022 Community Edition | Building C++ projects | [Visual Studio](https://visualstudio.microsoft.com/vs/community/) |
 | Instant-NGP | Rendering of 3D Model | [Instant-NGP](https://github.com/NVlabs/instant-ngp) |
+| COLMAP | Structure-from-Motion and MVS pipeline | [COLMAP GitHub](https://github.com/colmap/colmap) |
+| MeshLab | Mesh viewing and editing | [MeshLab](https://www.meshlab.net/) |
 
 
 ---
 
 ## 🔧 Setup Instructions
 
-### 1. CUDA Installation
+### 1. Anaconda (Recommended)
+- Download and setup Anaconda.
+- Create a new virtual environment with
+  ```bash
+  conda create -n your_env_name python==3.8
+    ```
+- Now download the required python libraries from the requirement.txt.
+  ```bash
+  conda install --file requirementsconda.txt
+  pip install -r requirementspip.txt
+  ```
+
+### 2. CUDA Installation
 
 - Launch the CUDA installer and choose **Custom Installation**.
 - Select only:
@@ -40,10 +52,9 @@ Download and install the following:
 nvcc --version
 ```
 
-
 ---
 
-### 2. Visual Studio Setup
+### 3. Visual Studio Setup
 
 Install **Visual Studio 2022 Community Edition** with the following components:
 
@@ -56,7 +67,7 @@ Install **Visual Studio 2022 Community Edition** with the following components:
 
 ---
 
-### 3. Instant-NGP Installation \& Build
+### 4. Instant-NGP Installation \& Build
 
 Clone and build Instant-NGP:
 
@@ -86,21 +97,22 @@ cmake --build . --config RelWithDebInfo
 
 
 ---
+## Convert Video to 3D Model  
+### 1. Run `video_to_COLMAP.py`
 
-### 4. Run `video_to_COLMAP.py`
-
-- Set the path to your video and desired frame count (recommended: 1 frame/sec).
+- You will be asked for the path to the source video file.
+-You will be given the current fps of the video the total number of frames, and be asked for the preferred frame sample rate per second - for example: 2 fps. (Recommended - 1 frame/second)
 - Type `y` to view the COLMAP graph (optional).
-- The generated `transforms.json` will be saved in your current working directory.
+- The generated `transforms.json` will be saved in your current working root directory (i.e. if current working directory is W:\Project\.. it will get stored in W:).
 
 ---
 
-### 5. Prepare Instant-NGP Scene
+### 2. Prepare Instant-NGP Scene
 
 - Copy `transforms.json` into:
 
 ```
-instant-ngp/build/instant-ngp/data/v2obj/
+instant-ngp/build/instant-ngp/data/v2obj/ (Only if you built instant-ngp inside the original folder )
 ```
 
 - Ensure the following files are inside the `v2obj` folder:
@@ -118,13 +130,24 @@ python correction2.py
 
 ---
 
-### 6. Launch Instant-NGP Viewer
+### 3. Launch Instant-NGP Viewer
 
 From Anaconda Prompt, run:
 
 ```bash
 .\instant-ngp.exe --scene "path\to\instant-ngp\data\v2obj"
 ```
+
+
+---
+
+| File Name | Purpose |
+| :-- | :-- |
+| `video_to_frames.py` | Extracts frames from video as images |
+| `video_to_COLMAP.py` | Orchestrates the full pipeline: extraction, COLMAP, and visualization |
+| `visualize_COLMAP_output.py` | Visualizes camera positions/orientations from COLMAP output |
+| `correction1.py` | Fixes image paths in `transforms.json` for Instant-NGP compatibility |
+| `correction2.py` | Verifies that image files are valid and not corrupted |
 
 
 ---
