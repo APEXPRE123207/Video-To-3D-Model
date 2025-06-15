@@ -141,7 +141,7 @@ cmake --build . --config RelWithDebInfo
 - The generated `transforms.json` will be saved in your current working root directory (i.e. if current working directory is W:\Project\.. it will get stored in W:).
 
   <a >
-    <img src="data/Meta/Figure-1.png" width="350" />
+    <img src="Data/Meta/Figure_1.png" width="350" />
   </a>
 ---
 
