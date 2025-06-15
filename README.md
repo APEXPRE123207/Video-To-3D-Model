@@ -234,7 +234,8 @@ instant-ngp/
 ---
 
 ## 🧠 Notes
-
+- Make sure the vidoe is in good quality (perferably 4k or 1080p 60fps).
+- Start the video form top addn slowlt spiral down, covering each angle and make sure there are no jumpcuts.
 - This pipeline is optimized for GPU-based rendering.
 - Ensure you have a compatible NVIDIA GPU with CUDA support.
 - Use `RelWithDebInfo` for faster runtime and debugging support.
