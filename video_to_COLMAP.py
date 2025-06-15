@@ -30,8 +30,8 @@ if __name__ == "__main__":
     images_path = frames_save_path
 
     # Set the path to the colmap2nerf.py script
-    # colmap2nerf_script_path = PROJECT_ROOT + r'.\instant-ngp\scripts\colmap2nerf.py'
-    colmap2nerf_script_path =  r'.\instant-ngp\scripts\colmap2nerf.py'
+    # colmap2nerf_script = PROJECT_ROOT + r'.\instant-ngp\scripts\colmap2nerf.py'
+    colmap2nerf_script =  r'.\instant-ngp\scripts\colmap2nerf.py'
 
     # Set the arguments for colmap2nerf.py
     colmap2nerf_arguments = [
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # Construct the command-line arguments
     command = [
                   'python',
-                  colmap2nerf_script_path
+                  colmap2nerf_script
               ] + colmap2nerf_arguments
 
     # Execute the command using subprocess
