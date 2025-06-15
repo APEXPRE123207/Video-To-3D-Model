@@ -206,7 +206,7 @@ This video demonstrates how to use the Instant-NGP built-in API to produce a 3D 
 
 ## Result
 - The 3D object - an .obj file that can be upload and open in MeshLab.
-- 3D Model that cna be edited in Blender.
+- 3D Model that can be edited in Blender.
 - Finding the volume of the object and compare it with real-life object, for checking any decrepancies
 
   <p float="center">
