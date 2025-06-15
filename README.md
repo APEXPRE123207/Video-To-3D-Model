@@ -133,7 +133,7 @@ cmake --build . --config RelWithDebInfo
 * [video_to_COLMAP](video_to_COLMAP.py)
 * [visualize_COLMAP_output](visualize_COLMAP_output.py)
 * 
-### 2. Run `[video_to_COLMAP.py](video_to_COLMAP.py)`
+### 2. Run [video_to_COLMAP.py](video_to_COLMAP.py)
 
 - You will be asked for the path to the source video file.
 -You will be given the current fps of the video the total number of frames, and be asked for the preferred frame sample rate per second - for example: 2 fps. (Recommended - 1 frame/second)
