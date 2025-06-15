@@ -19,6 +19,7 @@ Download and install the following:
 | COLMAP | Structure-from-Motion and MVS pipeline | [COLMAP GitHub](https://github.com/colmap/colmap) |
 | Anaconda | Managing Python virtual environments | [Anaconda](https://www.anaconda.com/products/distribution) |
 | MeshLab | Mesh viewing and editing | [MeshLab](https://www.meshlab.net/) |
+| Instant-NGP | Rendering of 3D Model | [Instant-NGP](https://github.com/NVlabs/instant-ngp) |
 
 
 ---
