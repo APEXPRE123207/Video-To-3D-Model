@@ -140,6 +140,9 @@ cmake --build . --config RelWithDebInfo
 - Type `y` to view the COLMAP graph (optional).
 - The generated `transforms.json` will be saved in your current working root directory (i.e. if current working directory is W:\Project\.. it will get stored in W:).
 
+  <a >
+    <img src="Data/Meta/Figure_1.png" width="350" />
+  </a>
 ---
 
 ### 3. Prepare Instant-NGP Scene
@@ -172,12 +175,13 @@ From Anaconda Prompt, run:
 ```bash
 .\instant-ngp.exe --scene "path\to\instant-ngp\data\v2obj"
 ```
-
+---
 
 ### 5. From rendered scene into 3D (.STL) object - Instant-ngp and MeshLab:
 - To extract a 3D object from the rendered scene - follow [Export 3D Object from Nvidia (instant-ngp) NeRF and load it into Blender and MeshLab](https://www.youtube.com/watch?v=55XKtYOIB7Y)
 This video demonstrates how to use the Instant-NGP built-in API to produce a 3D object from the scene.
 
+---
 ### 6. Blender
 - After extracting open it in blender.
 - Delete the noises from the 3D Model.
