@@ -1,6 +1,37 @@
 # 📦 From Video to 3D Model – Setup Guide
 
-This repository provides a step-by-step guide to convert a video into a 3D object using [Instant-NGP](https://github.com/NVlabs/instant-ngp), [COLMAP](https://colmap.github.io/), and supporting tools.
+## Project Description
+
+This project was undertaken as part of a Summer Internship at **Garden Reach Shipbuilders and Engineers Ltd (GRSE)**. The repository provides a comprehensive, step-by-step pipeline for converting a video of a real-world object into a detailed 3D model using state-of-the-art photogrammetry and neural rendering techniques.
+
+The workflow leverages [COLMAP](https://colmap.github.io/) for camera pose estimation and structure-from-motion, and [Instant-NGP](https://github.com/NVlabs/instant-ngp) for fast neural radiance field (NeRF) training and mesh extraction. The resulting 3D model can be exported and loaded into Blender or MeshLab for further analysis, including accurate volume measurement of the reconstructed object.
+
+### Key Features
+
+- **End-to-End Pipeline:** Automates the process from video frame extraction, camera calibration, and scene reconstruction to neural rendering and mesh export.
+- **State-of-the-Art Tools:** Utilizes COLMAP for robust photogrammetric reconstruction and Instant-NGP for real-time NeRF training and mesh conversion.
+- **Easy Export:** The generated 3D model can be seamlessly imported into Blender, where you can analyze, edit, and compute the object's volume.
+- **Documentation \& Scripts:** Includes scripts and detailed instructions for each stage, making the process accessible for both research and industrial applications.
+
+
+### Typical Workflow
+
+1. **Video Capture:** Record a video of the target object.
+2. **Frame Extraction:** Extract frames from the video for processing.
+3. **Camera Pose Estimation:** Use COLMAP to estimate camera positions and reconstruct the scene geometry.
+4. **NeRF Training:** Train a neural radiance field using Instant-NGP for high-quality 3D reconstruction and mesh export.
+5. **Mesh Export \& Analysis:** Load the exported 3D model into Blender or MeshLab to visualize, edit, and measure properties such as volume.
+
+### Applications
+
+- Industrial reverse engineering
+- Digital archiving of physical assets
+- Rapid prototyping and design validation
+- Educational and research projects in computer vision and graphics
+
+---
+
+**This repository demonstrates how modern AI-powered photogrammetry and neural rendering can be applied in a real-world industrial context, enabling fast, accurate, and interactive 3D modeling from simple video data.**
 
 ---
 
@@ -96,7 +127,13 @@ cmake --build . --config RelWithDebInfo
 
 ---
 ## Convert Video to 3D Model  
-### 1. Run `video_to_COLMAP.py`
+### 1. Copy the files
+- After downloading and installing the [Instant-NGP](https://github.com/NVlabs/instant-ngp) project, copy and paste the current project files into the Instant-NGP directory:
+* [video_to_frames](video_to_frames.py)
+* [video_to_COLMAP](video_to_COLMAP.py)
+* [visualize_COLMAP_output](visualize_COLMAP_output.py)
+* 
+### 2. Run `[video_to_COLMAP.py](video_to_COLMAP.py)`
 
 - You will be asked for the path to the source video file.
 -You will be given the current fps of the video the total number of frames, and be asked for the preferred frame sample rate per second - for example: 2 fps. (Recommended - 1 frame/second)
@@ -105,7 +142,7 @@ cmake --build . --config RelWithDebInfo
 
 ---
 
-### 2. Prepare Instant-NGP Scene
+### 3. Prepare Instant-NGP Scene
 
 - Copy `transforms.json` into:
 
@@ -128,7 +165,7 @@ python correction2.py
 
 ---
 
-### 3. Launch Instant-NGP Viewer
+### 4. Launch Instant-NGP Viewer
 
 From Anaconda Prompt, run:
 
@@ -137,7 +174,13 @@ From Anaconda Prompt, run:
 ```
 
 
+### 5. From rendered scene into 3D (.STL) object - Instant-ngp and MeshLab:
+- To extract a 3D object from the rendered scene - follow [Export 3D Object from Nvidia (instant-ngp) NeRF and load it into Blender and MeshLab](https://www.youtube.com/watch?v=55XKtYOIB7Y)
+This video demonstrates how to use the Instant-NGP built-in API to produce a 3D object from the scene.
+
+
 ---
+## Purpose of each file
 
 | File Name | Purpose |
 | :-- | :-- |
