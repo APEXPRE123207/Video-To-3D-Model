@@ -136,7 +136,7 @@ cmake --build . --config RelWithDebInfo
 ### 2. Run [video_to_COLMAP.py](video_to_COLMAP.py)
 
 - You will be asked for the path to the source video file.
--You will be given the current fps of the video the total number of frames, and be asked for the preferred frame sample rate per second - for example: 2 fps. (Recommended - 1 frame/second)
+- You will be given the current fps of the video the total number of frames, and be asked for the preferred frame sample rate per second - for example: 2 fps. (Recommended - 1 frame/second)
 - Type `y` to view the COLMAP graph (optional).
 - The generated `transforms.json` will be saved in your current working root directory (i.e. if current working directory is W:\Project\.. it will get stored in W:).
 
