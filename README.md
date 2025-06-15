@@ -180,7 +180,12 @@ This video demonstrates how to use the Instant-NGP built-in API to produce a 3D 
 
 ### 6. Blender
 - After extracting open it in blender.
-- Delete the noises
+- Delete the noises from the 3D Model.
+- Press N, and adjust the dimensions (X, Y, Z values accordingly).
+- Go to the scripting tab on the top.
+- Create new, and paste the volume code in the files.
+- Click on windows tab on top, and click console windows (This is where the output will be shown).
+- Run the script file and there you cna find the volume of the object.
 ---
 ## Purpose of each file
 
@@ -194,6 +199,11 @@ This video demonstrates how to use the Instant-NGP built-in API to produce a 3D 
 
 
 ---
+
+## Result
+- The 3D object - an .obj file that can be upload and open in MeshLab.
+- 3D Model that cna be edited in Blender.
+- Finding the volume of the object and compare it with real-life object, for checking any decrepancies
 
 ## 🧩 Troubleshooting / FAQ
 
