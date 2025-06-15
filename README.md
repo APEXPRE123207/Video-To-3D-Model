@@ -1,5 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
 # 📦 From Video to 3D Model – Setup Guide
 
 This repository provides a step-by-step guide to convert a video into a 3D object using [Instant-NGP](https://github.com/NVlabs/instant-ngp), [COLMAP](https://colmap.github.io/), and supporting tools.
