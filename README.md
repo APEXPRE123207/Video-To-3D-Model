@@ -131,7 +131,7 @@ cmake --build . --config RelWithDebInfo
 - After downloading and installing the [Instant-NGP](https://github.com/NVlabs/instant-ngp) project, copy and paste the current project files into the Instant-NGP directory:
 * [frames](frames.py)
 * [video_to_COLMAP](video_to_COLMAP.py)
-* [visualize_COLMAP_output](visualize_COLMAP.py)
+* [visualize_COLMAP](visualize_COLMAP.py)
   
 ### 2. Run [video_to_COLMAP.py](video_to_COLMAP.py)
 
