@@ -140,6 +140,9 @@ cmake --build . --config RelWithDebInfo
 - Type `y` to view the COLMAP graph (optional).
 - The generated `transforms.json` will be saved in your current working root directory (i.e. if current working directory is W:\Project\.. it will get stored in W:).
 
+  <a >
+    <img src="data/Meta/Figure-1.png" width="350" />
+  </a>
 ---
 
 ### 3. Prepare Instant-NGP Scene
