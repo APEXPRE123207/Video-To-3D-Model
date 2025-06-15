@@ -209,6 +209,15 @@ This video demonstrates how to use the Instant-NGP built-in API to produce a 3D 
 - 3D Model that cna be edited in Blender.
 - Finding the volume of the object and compare it with real-life object, for checking any decrepancies
 
+  <p float="center">
+  <a >
+    <img src="Data/Meta/sample.gif" width="350" />
+  </a>
+  <a >
+    <img src="Data/Meta/sample2.gif" width="350" />
+  </a>
+</p>
+
 ## 🧩 Troubleshooting / FAQ
 
 **CMake cannot find CUDA**
