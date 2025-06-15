@@ -200,6 +200,7 @@ This video demonstrates how to use the Instant-NGP built-in API to produce a 3D 
 | `visualize_COLMAP.py` | Visualizes camera positions/orientations from COLMAP output |
 | `correction1.py` | Fixes image paths in `transforms.json` for Instant-NGP compatibility |
 | `correction2.py` | Verifies that image files are valid and not corrupted |
+| `blender_volume.py` | Helps finding volume of the 3D Model generated |
 
 
 ---
